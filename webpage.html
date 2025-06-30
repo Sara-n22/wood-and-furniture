@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>wood and furniture</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <style>
+            body{
+                margin:0;
+                font-family: 'Segoe UI', sans-serif;
+                background: #f7f6f2;
+            }
+
+            header{
+                background-color: #4e342e;
+                color: white;
+                padding: 15px 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            header h1{
+                margin: 0;
+                font-size: 22px;
+            }
+
+            nav a{
+                color: white;
+                margin: 0 10px;
+                text-decoration: none;
+            }
+
+            nav a:hover{
+                text-decoration: underline;
+            }
+
+            .container{
+                max-width: 900px;
+                margin: 30px auto;
+                padding: 20px;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba( 0, 0, 0, 1);
+
+            }
+
+            h2{
+                text-align: center;
+                color: #5d4037;
+            }
+
+            .login-form, .contact-form{
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin-top: 15px;
+            
+            }
+            input,textarea,button{
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 14px;
+
+            }
+
+            button{
+                background-color: #6d4c41;
+                color: white;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+            button:hover{
+                background-color: #5d4037;
+            }
+
+            .product{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                gap: 20px;
+
+            }
+
+            .product-card{
+                background: #f5f5f5;
+                border-radius: 8px;
+                padding: 15px;
+                width: 200px;
+                box-shadow: 0 0 8px rgba(0, 0, 0, 0,1);
+                text-align: center;
+
+            }
+
+            .product-card img{
+                width: 100%;
+                height: 130px;
+                object-fit: cover;
+                border-radius: 5px;
+
+            }
+
+            .hidden{
+                display: none;
+            }
+
+            footer{
+                text-align: center;
+                padding: 20px;
+                background: #d7ccc8;
+                margin-top: 40px;
+
+            }
+
+            @media(max-width:600px){
+                .product{
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                header{
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>wood and furniture</h1>
+            <nav>
+                <a href="#loginPage">login</a>
+                <a href="#productPage">products</a>
+                <a href="#contactPage">contact</a>
+            </nav>
+            </header>
+
+            <!--login page-->
+            <div class="container" id="loginPage">
+                <h2>login</h2>
+                <div class="login-form">
+                    <input type="text" id="username" placeholder="username"/>
+                    <input type="password" id="password" placeholder="password"/>
+                    <button onclick="login()">login</button>
+                    </div>
+                    </div>
+
+
+                    <!--productpage-->
+                    <div class="container hidden" id="productPage">
+                        <h2>Available items</h2>
+                        <div class="product">
+                            <div class="product-card">
+                                <img src="C:\Users\user\Desktop\html\img\wood.jpg"alt="cassuarina tree"/>
+                                <h4>casuarina tree</h4>
+                                <p>price:$100 - $350</p>
+                                <button onclick="alert('added to cart')">add to cart</button>
+                                </div>
+
+                                <div class="product-card">
+                                    <img src="C:\Users\user\Desktop\html\img\honey.jpg"alt="honey"/>
+                                    <h4>pure honey  </h4>
+                                    <p>price:$400 - $800</p>
+                                    <button onclick="alert('added to cart')">add to cart</button>
+                                    </div>
+
+                                    <div class="product-card">
+                                        <img src="C:\Users\user\Desktop\html\img\wood.jpg"alt="cassuarina tree"/>
+                                        <h4>casuarina tree</h4>
+                                        <p>price:$100 - $350</p>
+                                        <button onclick="alert('added to cart')">add to cart</button>
+                                        </div>
+
+                                        <div class="product-card">
+                                            <img src="C:\Users\user\Desktop\html\img\palm cot.jpg"alt="palm fibre cot  "/>
+                                            <h4>palm fibre cot </h4>
+                                            <p>price:$7,500 - $20,000</p>
+                                            <button onclick="alert('added to cart')">add to cart</button>
+                                            </div>
+
+                                            <div class="product-card">
+                                                <img src="C:\Users\user\Desktop\html\img\rope.jpg"alt="coconut fibre rope "/>
+                                                <h4>coconut fibre rope </h4>
+                                                <p>price:$30 - $50</p>
+                                                <button onclick="alert('added to cart')">add to cart</button>
+                                                </div>
+
+                                                <div class="product-card">
+                                                    <img src="C:\Users\user\Desktop\html\img\net.jpg"alt="mango net"/>
+                                                    <h4>mango net</h4>
+                                                    <p>price:$20 - $30</p>
+                                                    <button onclick="alert('added to cart')">add to cart</button>
+                                                    </div>
+                                                    </div>
+                                                    </div>
+
+                                                    <!--contact form-->
+                                                    <div class="container" id="contactPage">
+                                                        <h2>contact us</h2>
+                                                        <form class="contact-form">
+                                                            <input type="text" placeholder="your name" required />
+                                                            <input type="email" placeholder="your email" required />
+                                                            <textarea rows="4" placeholder="message..."  required></textarea>
+                                                            <button type="submit" onclick="alert('message sent');return false;">send message</button>
+                                                        </form>
+                                                    </div>
+
+                                         <footer>
+                                             &copy;2025 wood and furniture.all rights reserved.
+                                    
+                                         </footer>    
+                                         
+                                         <script>
+                                             function login() {
+                                                 const user=document.getElementById("username").value;
+                                                 const pass=document.getElementById("password").value;
+
+                                                 if(user ==="admin" && pass ==="1234"){
+                                                     document.getElementById("loginPage").classList.add("hidden");
+                                                     document.getElementById("productPage").classList.remove("hidden");
+                                                     location.hash="productPage";
+                                                    }
+                                                    else{
+                                                        alert("Invalid credentials. Try 'admin' and '1234'.");
+                                                    }
+                                             }
+                                         </script>
+                                         </body>
+                                         </html>
+
+                    
+                
+            
+        
+    
+                                    
+                    
+                            
+    
+        
